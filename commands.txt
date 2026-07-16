@@ -1,0 +1,106 @@
+1. Check if Git is initialized
+git status
+
+If you get:
+
+fatal: not a git repository
+
+then initialize it:
+
+git init
+------------------------------------------------------------
+2. Connect your local folder to GitHub
+git remote add origin https://github.com/shxm11/demo.git
+
+Verify it:
+
+git remote -v
+
+You should see something like:
+
+origin  https://github.com/shxm11/demo.git (fetch)
+origin  https://github.com/shxm11/demo.git (push)
+------------------------------------------------------------
+3. Create a file
+
+For example:
+
+echo "# Demo Repository" > README.md
+
+Or create any file you want.
+------------------------------------------------------------
+4. Stage the files
+git add .
+------------------------------------------------------------
+5. Commit
+git commit -m "Initial commit"
+------------------------------------------------------------
+6. Rename the branch to main (if needed)
+git branch -M main
+------------------------------------------------------------
+7. Push to GitHub
+git push -u origin main
+
+The -u option sets origin/main as the default upstream, so next time you only need:
+
+git push
+*
+*
+*
+*
+*
+*
+
+
+Step 2. Or, if your current folder is already connected
+
+Check the remote:
+
+git remote -v
+
+Then pull the latest code:
+
+git pull origin main
+------------------------------------------------------------
+
+Step 3. Make your changes
+
+Edit any file, for example README.md.
+------------------------------------------------------------
+
+Step 4. Check what changed
+git status
+------------------------------------------------------------
+
+Step 5. Stage the changes
+git add .
+
+Or stage a specific file:
+
+git add README.md
+------------------------------------------------------------
+
+Step 6. Commit
+git commit -m "Updated README"
+------------------------------------------------------------
+
+Step 7. Push to main
+git push origin main
+
+If you've already set the upstream branch previously, you can simply use:
+
+git push
+The complete workflow you'll use most often
+git pull origin main
+# Edit your files
+git status
+git add .
+git commit -m "Describe what you changed"
+git push origin main
+*
+*
+*
+*
+*
+*
+
